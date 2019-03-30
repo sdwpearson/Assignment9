@@ -32,11 +32,27 @@
 //
 void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
 {
-    ////////////////////////////////////////////////
-    //                                            //
-    // IMPLEMENT THIS AS PART OF YOUR ASSIGNMENT! //
-    //                                            //
-    ////////////////////////////////////////////////
+    static std::mt19937 engine(13);
+    static std::uniform_real_distribution<> uniform;
+    int Z = walkerpositions.size();
+    // move all walkers
+    for (int i = 0; i < Z; i++) {
+        double r = uniform(engine); // draws a random number
+        if (r < prob) {
+            // move to the right, respecting periodic boundaries
+            walkerpositions[i]++;
+            if (walkerpositions[i] == N)
+                walkerpositions[i] = 0;
+        } else if (r < 2*prob) {
+            // move to the left, respecting periodic boundaries
+            if (walkerpositions[i] == 0)
+                walkerpositions[i] = N-1;
+            else
+                walkerpositions[i]--;
+        } else {
+            // walkerposition remains unchanged
+        }
+    }
 }
 
 
