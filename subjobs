@@ -1,0 +1,16 @@
+export OMP_NUM_THREADS=1; time ./diffring params.ini
+export OMP_NUM_THREADS=2; time ./diffring params.ini
+export OMP_NUM_THREADS=3; time ./diffring params.ini
+export OMP_NUM_THREADS=4; time ./diffring params.ini
+export OMP_NUM_THREADS=5; time ./diffring params.ini
+export OMP_NUM_THREADS=6; time ./diffring params.ini
+export OMP_NUM_THREADS=7; time ./diffring params.ini
+export OMP_NUM_THREADS=8; time ./diffring params.ini
+export OMP_NUM_THREADS=9; time ./diffring params.ini
+export OMP_NUM_THREADS=10; time ./diffring params.ini
+export OMP_NUM_THREADS=11; time ./diffring params.ini
+export OMP_NUM_THREADS=12; time ./diffring params.ini
+export OMP_NUM_THREADS=13; time ./diffring params.ini
+export OMP_NUM_THREADS=14; time ./diffring params.ini
+export OMP_NUM_THREADS=15; time ./diffring params.ini
+export OMP_NUM_THREADS=16; time ./diffring params.ini
