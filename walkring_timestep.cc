@@ -38,7 +38,7 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
     int seed = 1;
 
     // move all walkers
-    #pragma omp parallel for default(none) shared(walkerpositions, uniform, Z, N, prob) private(engine,seed)
+    #pragma omp parallel for default(none) shared(walkerpositions, uniform, Z, N, prob) private(seed)
     for (int i = 0; i < Z; i++) {
         // get the seed from the thread number
         seed = omp_get_thread_num();
