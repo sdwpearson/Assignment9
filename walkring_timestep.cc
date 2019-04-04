@@ -32,6 +32,7 @@
 //
 void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
 {
+    // can get the seed from the random core?
     static std::mt19937 engine(13);
     static std::uniform_real_distribution<> uniform;
     int Z = walkerpositions.size();

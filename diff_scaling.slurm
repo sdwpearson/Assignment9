@@ -13,7 +13,7 @@ module load gcc hdf5 netcdf boost gnu-parallel
 cd $SLURM_SUBMIT_DIR
   
 # EXECUTION COMMAND 
-parallel --joblog runs.log -j 16 --no-run-if-empty < subjobs
+parallel --joblog runs_diff.log -j $SLURM_TASKS_PER_NODE --no-run-if-empty < subjobs
 
 
 
