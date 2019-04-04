@@ -1,0 +1,17 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+15	:	1554319630.621	   464.875	0	3713	0	0	export OMP_NUM_THREADS=15; time ./diffring params.ini
+16	:	1554319630.624	   469.027	0	3713	0	0	export OMP_NUM_THREADS=16; time ./diffring params.ini
+14	:	1554319630.619	   506.463	0	3713	0	0	export OMP_NUM_THREADS=14; time ./diffring params.ini
+12	:	1554319630.614	   510.029	0	3713	0	0	export OMP_NUM_THREADS=12; time ./diffring params.ini
+13	:	1554319630.616	   534.003	0	3713	0	0	export OMP_NUM_THREADS=13; time ./diffring params.ini
+11	:	1554319630.612	   543.924	0	3713	0	0	export OMP_NUM_THREADS=11; time ./diffring params.ini
+10	:	1554319630.609	   555.214	0	3713	0	0	export OMP_NUM_THREADS=10; time ./diffring params.ini
+8	:	1554319630.605	   591.155	0	3713	0	0	export OMP_NUM_THREADS=8; time ./diffring params.ini
+9	:	1554319630.607	   597.852	0	3713	0	0	export OMP_NUM_THREADS=9; time ./diffring params.ini
+7	:	1554319630.602	   608.849	0	3713	0	0	export OMP_NUM_THREADS=7; time ./diffring params.ini
+6	:	1554319630.600	   616.524	0	3713	0	0	export OMP_NUM_THREADS=6; time ./diffring params.ini
+5	:	1554319630.597	   621.652	0	3713	0	0	export OMP_NUM_THREADS=5; time ./diffring params.ini
+4	:	1554319630.594	   630.479	0	3713	0	0	export OMP_NUM_THREADS=4; time ./diffring params.ini
+3	:	1554319630.591	   639.849	0	3713	0	0	export OMP_NUM_THREADS=3; time ./diffring params.ini
+2	:	1554319630.587	   663.032	0	3713	0	0	export OMP_NUM_THREADS=2; time ./diffring params.ini
+1	:	1554319630.584	   710.118	0	3713	0	0	export OMP_NUM_THREADS=1; time ./diffring params.ini
