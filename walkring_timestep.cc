@@ -33,7 +33,6 @@
 //
 void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
 {
-    static std::uniform_real_distribution<> uniform;
     int Z = walkerpositions.size();
     int seed = 1;
 
@@ -43,6 +42,7 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
         // get the seed from the thread number
         seed = omp_get_thread_num();
         std::mt19937 engine(seed);
+        std::uniform_real_distribution<> uniform;
         double r = uniform(engine); // draws a random number
 
         if (r < prob) {
