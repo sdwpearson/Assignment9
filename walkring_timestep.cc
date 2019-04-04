@@ -33,17 +33,19 @@
 //
 void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
 {
+    // get the seed from the thread number
+    static std::mt19937 engine(seed);
+    static std::uniform_real_distribution<> uniform;
     int Z = walkerpositions.size();
     int seed = 1;
 
     // move all walkers
     #pragma omp parallel for default(none) shared(walkerpositions, Z, N, prob) private(seed)
     for (int i = 0; i < Z; i++) {
-        // get the seed from the thread number
-        seed = omp_get_thread_num()*100;
-        std::mt19937 engine(seed);
-        std::uniform_real_distribution<> uniform;
-        double r = uniform(engine); // draws a random number
+        /* initialize random seed: */
+        srand (time(NULL)*omp_get_thread_num());
+        double r = rand() % 1;
+        //double r = uniform(engine); // draws a random number
 
         if (r < prob) {
             // move to the right, respecting periodic boundaries
