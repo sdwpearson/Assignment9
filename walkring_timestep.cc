@@ -42,7 +42,7 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
     for (int i = 0; i < Z; i++) {
         // get the seed from the thread number
         seed = omp_get_thread_num();
-        static std::mt19937 engine(seed);
+        std::mt19937 engine(seed);
         double r = uniform(engine); // draws a random number
 
         if (r < prob) {
