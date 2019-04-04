@@ -1,16 +1,16 @@
-export OMP_NUM_THREADS=1; ./diffring params.ini
-export OMP_NUM_THREADS=2; ./diffring params.ini
-export OMP_NUM_THREADS=3; ./diffring params.ini
-export OMP_NUM_THREADS=4; ./diffring params.ini
-export OMP_NUM_THREADS=5; ./diffring params.ini
-export OMP_NUM_THREADS=6; ./diffring params.ini
-export OMP_NUM_THREADS=7; ./diffring params.ini
-export OMP_NUM_THREADS=8; ./diffring params.ini
-export OMP_NUM_THREADS=9; ./diffring params.ini
-export OMP_NUM_THREADS=10; ./diffring params.ini
-export OMP_NUM_THREADS=11; ./diffring params.ini
-export OMP_NUM_THREADS=12; ./diffring params.ini
-export OMP_NUM_THREADS=13; ./diffring params.ini
-export OMP_NUM_THREADS=14; ./diffring params.ini
-export OMP_NUM_THREADS=15; ./diffring params.ini
-export OMP_NUM_THREADS=16; ./diffring params.ini
+export OMP_NUM_THREADS=1; export OPENBLAS_NUM_THREADS=1; ./diffring params.ini
+export OMP_NUM_THREADS=2; export OPENBLAS_NUM_THREADS=2; ./diffring params.ini
+export OMP_NUM_THREADS=3; export OPENBLAS_NUM_THREADS=3; ./diffring params.ini
+export OMP_NUM_THREADS=4; export OPENBLAS_NUM_THREADS=4; ./diffring params.ini
+export OMP_NUM_THREADS=5; export OPENBLAS_NUM_THREADS=5; ./diffring params.ini
+export OMP_NUM_THREADS=6; export OPENBLAS_NUM_THREADS=6; ./diffring params.ini
+export OMP_NUM_THREADS=7; export OPENBLAS_NUM_THREADS=7; ./diffring params.ini
+export OMP_NUM_THREADS=8; export OPENBLAS_NUM_THREADS=8; ./diffring params.ini
+export OMP_NUM_THREADS=9; export OPENBLAS_NUM_THREADS=9; ./diffring params.ini
+export OMP_NUM_THREADS=10; export OPENBLAS_NUM_THREADS=10; ./diffring params.ini
+export OMP_NUM_THREADS=11; export OPENBLAS_NUM_THREADS=11; ./diffring params.ini
+export OMP_NUM_THREADS=12; export OPENBLAS_NUM_THREADS=12; ./diffring params.ini
+export OMP_NUM_THREADS=13; export OPENBLAS_NUM_THREADS=13; ./diffring params.ini
+export OMP_NUM_THREADS=14; export OPENBLAS_NUM_THREADS=14; ./diffring params.ini
+export OMP_NUM_THREADS=15; export OPENBLAS_NUM_THREADS=15; ./diffring params.ini
+export OMP_NUM_THREADS=16; export OPENBLAS_NUM_THREADS=16; ./diffring params.ini
