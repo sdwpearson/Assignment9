@@ -40,7 +40,7 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
     int Z = walkerpositions.size(); 
 
     // move all walkers
-    #pragma omp parallel for default(none) shared(walkerpositions, N, prob) private(engine, uniform) 
+    #pragma omp parallel for default(none) shared(walkerpositions, N, prob,Z) private(engine, uniform) 
     for (int i = 0; i < Z; i++) {
         /* initialize random seed: */
         // srand (time(NULL)*omp_get_thread_num());
