@@ -53,9 +53,10 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
     static std::mt19937 engine16(285);
     static std::uniform_real_distribution<> uniform;
     int Z = walkerpositions.size(); 
+    double r;
 
     // move all walkers
-    #pragma omp parallel for default(none) shared(walkerpositions, N, prob,Z) private(engine1, engine2, engine3, engine4, engine5, engine6, engine7, engine8, engine9, engine10, engine11, engine12, engine13, engine14, engine15, engine16, uniform) 
+    #pragma omp parallel for default(none) shared(walkerpositions, N, prob,Z) private(r, engine1, engine2, engine3, engine4, engine5, engine6, engine7, engine8, engine9, engine10, engine11, engine12, engine13, engine14, engine15, engine16, uniform) 
     for (int i = 0; i < Z; i++) {
         /* initialize random seed: */
         // srand (time(NULL)*omp_get_thread_num());
@@ -63,37 +64,37 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
         //double r = uniform(engine); // draws a random number
         int thread_num = omp_get_thread_num()+1;
         if(thread_num == 1)
-            double r = uniform(engine1); // draws a random number
+            r = uniform(engine1); // draws a random number
         else if(thread_num == 2)
-            double r = uniform(engine2); // draws a random number
+            r = uniform(engine2); // draws a random number
         else if(thread_num == 3)
-            double r = uniform(engine3); // draws a random number
+            r = uniform(engine3); // draws a random number
         else if(thread_num == 4)
-            double r = uniform(engine4); // draws a random number
+            r = uniform(engine4); // draws a random number
         else if(thread_num == 5)
-            double r = uniform(engine5); // draws a random number
+            r = uniform(engine5); // draws a random number
         else if(thread_num == 6)
-            double r = uniform(engine6); // draws a random number
+            r = uniform(engine6); // draws a random number
         else if(thread_num == 7)
-            double r = uniform(engine7); // draws a random number
+            r = uniform(engine7); // draws a random number
         else if(thread_num == 8)
-            double r = uniform(engine8); // draws a random number
+            r = uniform(engine8); // draws a random number
         else if(thread_num == 9)
-            double r = uniform(engine9); // draws a random number
+            r = uniform(engine9); // draws a random number
         else if(thread_num == 10)
-            double r = uniform(engine10); // draws a random number
+            r = uniform(engine10); // draws a random number
         else if(thread_num == 11)
-            double r = uniform(engine11); // draws a random number
+            r = uniform(engine11); // draws a random number
         else if(thread_num == 12)
-            double r = uniform(engine12); // draws a random number
+            r = uniform(engine12); // draws a random number
         else if(thread_num == 13)
-            double r = uniform(engine13); // draws a random number
+            r = uniform(engine13); // draws a random number
         else if(thread_num == 14)
-            double r = uniform(engine14); // draws a random number
+            r = uniform(engine14); // draws a random number
         else if(thread_num == 15)
-            double r = uniform(engine15); // draws a random number
+            r = uniform(engine15); // draws a random number
         else 
-            double r = uniform(engine16); // draws a random number
+            r = uniform(engine16); // draws a random number
 
         if (r < prob) {
             // move to the right, respecting periodic boundaries
