@@ -1,0 +1,17 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+1	:	1554426693.911	    81.910	0	3713	0	0	export OMP_NUM_THREADS=1 && ./walkring params.ini
+2	:	1554426775.828	    45.399	0	3713	0	0	export OMP_NUM_THREADS=2 && ./walkring params.ini
+3	:	1554426821.252	    32.988	0	3713	0	0	export OMP_NUM_THREADS=3 && ./walkring params.ini
+4	:	1554426854.247	    25.272	0	3713	0	0	export OMP_NUM_THREADS=4 && ./walkring params.ini
+5	:	1554426879.525	    20.980	0	3713	0	0	export OMP_NUM_THREADS=5 && ./walkring params.ini
+6	:	1554426900.512	    18.803	0	3713	0	0	export OMP_NUM_THREADS=6 && ./walkring params.ini
+7	:	1554426919.322	    17.777	0	3713	0	0	export OMP_NUM_THREADS=7 && ./walkring params.ini
+8	:	1554426937.106	    16.084	0	3713	0	0	export OMP_NUM_THREADS=8 && ./walkring params.ini
+9	:	1554426953.197	    14.467	0	3713	0	0	export OMP_NUM_THREADS=9 && ./walkring params.ini
+10	:	1554426967.671	    13.338	0	3713	0	0	export OMP_NUM_THREADS=10 && ./walkring params.ini
+11	:	1554426981.016	    12.519	0	3713	0	0	export OMP_NUM_THREADS=11 && ./walkring params.ini
+12	:	1554426993.541	    11.907	0	3713	0	0	export OMP_NUM_THREADS=12 && ./walkring params.ini
+13	:	1554427005.454	    11.890	0	3713	0	0	export OMP_NUM_THREADS=13 && ./walkring params.ini
+14	:	1554427017.349	    11.588	0	3713	0	0	export OMP_NUM_THREADS=14 && ./walkring params.ini
+15	:	1554427028.944	    11.661	0	3713	0	0	export OMP_NUM_THREADS=15 && ./walkring params.ini
+16	:	1554427040.611	    10.967	0	3713	0	0	export OMP_NUM_THREADS=16 && ./walkring params.ini
