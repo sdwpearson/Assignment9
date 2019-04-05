@@ -1,0 +1,16 @@
+export OMP_NUM_THREADS=1 && ./walkring params.ini
+export OMP_NUM_THREADS=2 && ./walkring params.ini
+export OMP_NUM_THREADS=3 && ./walkring params.ini
+export OMP_NUM_THREADS=4 && ./walkring params.ini
+export OMP_NUM_THREADS=5 && ./walkring params.ini
+export OMP_NUM_THREADS=6 && ./walkring params.ini
+export OMP_NUM_THREADS=7 && ./walkring params.ini
+export OMP_NUM_THREADS=8 && ./walkring params.ini
+export OMP_NUM_THREADS=9 && ./walkring params.ini
+export OMP_NUM_THREADS=10 && ./walkring params.ini
+export OMP_NUM_THREADS=11 && ./walkring params.ini
+export OMP_NUM_THREADS=12 && ./walkring params.ini
+export OMP_NUM_THREADS=13 && ./walkring params.ini
+export OMP_NUM_THREADS=14 && ./walkring params.ini
+export OMP_NUM_THREADS=15 && ./walkring params.ini
+export OMP_NUM_THREADS=16 && ./walkring params.ini

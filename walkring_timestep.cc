@@ -33,8 +33,7 @@
 //
 void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
 {
-    int seed = 13;
-    // get the seed from the thread number
+    // Get up to 16 different engines
     static std::mt19937 engine1(23);
     static std::mt19937 engine2(25);
     static std::mt19937 engine3(63);
@@ -56,13 +55,10 @@ void walkring_timestep(rarray<int,1>& walkerpositions, int N, double prob)
     double r;
 
     // move all walkers
-    #pragma omp parallel for default(none) shared(walkerpositions, N, prob,Z,engine1, engine2, engine3, engine4, engine5, engine6, engine7, engine8, engine9, engine10, engine11, engine12, engine13, engine14, engine15, engine16, uniform) private(r) 
+    #pragma omp parallel for default(none) shared(walkerpositions, N, prob, Z, engine1, engine2, engine3, engine4, engine5, engine6, engine7, engine8, engine9, engine10, engine11, engine12, engine13, engine14, engine15, engine16, uniform) private(r) 
     for (int i = 0; i < Z; i++) {
-        /* initialize random seed: */
-        // srand (time(NULL)*omp_get_thread_num());
-        // double r = rand() % 1;
-        //double r = uniform(engine); // draws a random number
         int thread_num = omp_get_thread_num()+1;
+        
         if(thread_num == 1)
             r = uniform(engine1); // draws a random number
         else if(thread_num == 2)
